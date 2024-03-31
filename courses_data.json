@@ -1,0 +1,542 @@
+[
+    {
+        "category": "core",
+        "course_code": "CSCI 141",
+        "course_name": "Computer Programming I",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 145",
+        "course_name": "Computer Programming and Linear Data Structures",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 241",
+        "course_name": "Data Structures",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 247",
+        "course_name": "Computer Systems I",
+        "credits": "5"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 301",
+        "course_name": "Formal Languages and Functional Programming",
+        "credits": "5"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 305",
+        "course_name": "Analysis of Algorithms and Data Structures I",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 330",
+        "course_name": "Database Systems",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 345",
+        "course_name": "Object Oriented Design",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CISS 346",
+        "course_name": "Secure Software Development",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 347",
+        "course_name": "Computer Systems II",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 367",
+        "course_name": "Computer Networks I",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 405",
+        "course_name": "Analysis of Algorithms and Data Structures II",
+        "credits": "4"
+    },
+    {
+        "category": "core",
+        "course_code": "CSCI 447",
+        "course_name": "Operating Systems",
+        "credits": "4"
+    },
+    {
+        "category": "senior",
+        "course_code": "CSCI 491",
+        "course_name": "Senior Project 1",
+        "credits": "2"
+    },
+    {
+        "category": "senior",
+        "course_code": "CSCI 492",
+        "course_name": "Senior Project 2",
+        "credits": "2"
+    },
+    {
+        "category": "senior",
+        "course_code": "CSCI 493",
+        "course_name": "Senior Project 3",
+        "credits": "2"
+    },
+    {
+        "category": "senior",
+        "course_code": "CSCI 490",
+        "course_name": "Senior Research",
+        "credits": "2"
+    },
+    {
+        "category": "science",
+        "course_code": "MATH 124",
+        "course_name": "Calculus and Analytic Geometry I",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "MATH 125",
+        "course_name": "Calculus and Analytic Geometry II",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "MATH 134",
+        "course_name": "Calculus I Honors",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "MATH 135",
+        "course_name": "Calculus II Honors",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "MATH 138",
+        "course_name": "Accelerated Calculus",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "MATH 204",
+        "course_name": "Elementary Linear Algebra",
+        "credits": "4"
+    },
+    {
+        "category": "science",
+        "course_code": "MATH 341",
+        "course_name": "Probability and Statistical Inference",
+        "credits": "4"
+    },
+    {
+        "category": "science",
+        "course_code": "BIOL 204",
+        "course_name": "Introduction to Evolution, Ecology and Biodiversity w/lab",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "BIOL 205",
+        "course_name": "Introduction to Cellular and Molecular Biology w/lab",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "BIOL 206",
+        "course_name": "Introduction to Organismal Biology w/lab",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "CHEM 161",
+        "course_name": "General Chemistry I",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "CHEM 162",
+        "course_name": "General Chemistry II",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "CHEM 163",
+        "course_name": "General Chemistry III",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "GEOL 211",
+        "course_name": "Physical Geology",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "GEOL 212",
+        "course_name": "Historical Geology",
+        "credits": "4"
+    },
+    {
+        "category": "science",
+        "course_code": "GEOL 303",
+        "course_name": "Dinosaurs and Their Environment",
+        "credits": "3"
+    },
+    {
+        "category": "science",
+        "course_code": "GEOL 308",
+        "course_name": "Earthquakes",
+        "credits": "3"
+    },
+    {
+        "category": "science",
+        "course_code": "GEOL 309",
+        "course_name": "Volcanology",
+        "credits": "3"
+    },
+    {
+        "category": "science",
+        "course_code": "GEOL 314",
+        "course_name": "Engineering Geology",
+        "credits": "4"
+    },
+    {
+        "category": "science",
+        "course_code": "GEOL 315",
+        "course_name": "Minerals, Energy and Society",
+        "credits": "4"
+    },
+    {
+        "category": "science",
+        "course_code": "GEOL 340",
+        "course_name": "Geological Oceanography",
+        "credits": "3"
+    },
+    {
+        "category": "science",
+        "course_code": "PHYS 161",
+        "course_name": "Physics with Calculus I",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "PHYS 162",
+        "course_name": "Physics with Calculus II",
+        "credits": "5"
+    },
+    {
+        "category": "science",
+        "course_code": "PHYS 163",
+        "course_name": "Physics with Calculus III",
+        "credits": "5"
+    },
+    {
+        "category": "elective",
+        "course_code": "CISS 421",
+        "course_name": "Computer Forensics",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 321",
+        "course_name": "Game Programming",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 342",
+        "course_name": "Web Scripting",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 343",
+        "course_name": "Programming Workshop",
+        "credits": "1"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 372",
+        "course_name": "Robotics: Applications of Artificial Intelligence",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 380",
+        "course_name": "Numerical Computations",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 400",
+        "course_name": "Directed Independent Study",
+        "credits": "1"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 401",
+        "course_name": "Automata and Formal Language Theory",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 402",
+        "course_name": "Artificial Intelligence",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 404",
+        "course_name": "Natural Language Processing",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 573",
+        "course_name": "Computational Linguistics",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 410",
+        "course_name": "Programming Languages",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 412",
+        "course_name": "Mobile Device Programming",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 415",
+        "course_name": "Parallel Computation",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 424",
+        "course_name": "Social Network Analysis",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 426",
+        "course_name": "Principles of Human-Centered Technology Design",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 430",
+        "course_name": "Database Theory",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 436",
+        "course_name": "Technology for Social Good",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 440",
+        "course_name": "Virtual Worlds",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 442",
+        "course_name": "Advanced Web Programming in Java",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 450",
+        "course_name": "Compiler Theory and Design",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 461",
+        "course_name": "Computer Security",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 462",
+        "course_name": "OS Device Drivers",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 463",
+        "course_name": "Cyber Defense",
+        "credits": "1"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 467",
+        "course_name": "Computer Networks II",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 471",
+        "course_name": "Advanced Machine Learning",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 474",
+        "course_name": "Bioinformatics",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 476",
+        "course_name": "Computer Vision",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 477",
+        "course_name": "Data Mining",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 479",
+        "course_name": "Spoken Language Processing",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 480",
+        "course_name": "Computer Graphics",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 481",
+        "course_name": "Deep Learning",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 496",
+        "course_name": "Undergraduate Research",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 510",
+        "course_name": "Automata and Formal Language Theory",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 512",
+        "course_name": "Design and Implementation of Computer Programming Languages",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 520",
+        "course_name": "Advanced Compiler Design",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 525",
+        "course_name": "Advanced Topics in Operating Systems",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 530",
+        "course_name": "Advanced Database Theory",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 572",
+        "course_name": "Robotics",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 575",
+        "course_name": "Information Retrieval",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 578",
+        "course_name": "Cryptography",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 584",
+        "course_name": "Scientific Visualization",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "CSCI 585",
+        "course_name": "Image Processing",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "DATA 471",
+        "course_name": "Machine Learning",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "M/CS 335",
+        "course_name": "Linear Optimization",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "M/CS 375",
+        "course_name": "Numerical Computation",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "M/CS 435",
+        "course_name": "Nonlinear Optimization",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "M/CS 475",
+        "course_name": "Numerical Analysis",
+        "credits": "4"
+    },
+    {
+        "category": "elective",
+        "course_code": "M/CS 478",
+        "course_name": "Fundamentals of Cryptography",
+        "credits": "4"
+    }
+]

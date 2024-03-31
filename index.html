@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBMPlexMono">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .draggable {
+      cursor: pointer;
+      user-select: none;
+    }
+
+
+    body {
+      height: 100vh;
+      width: auto;
+      font-family: 'IBM Plex Mono';
+      font-style: normal;
+      font-weight: 500;
+      color: #31393E;
+    }
+
+    .sidebar {
+      height: calc(100vh - 50px);
+      margin: 0px 40px 0px 20px;
+      font-weight: 700;
+      min-width: 255px;
+      max-width: 15%;
+    }
+
+    .container-fluid {
+      padding: 20px;
+    }
+
+    .box {
+      border: #31393E 5px solid;
+      border-radius: 13px;
+      -webkit-box-shadow: 0px 10px 0px 0px #31393E;
+      -moz-box-shadow: 0px 10px 0px 0px #31393E;
+      box-shadow: 0px 10px 0px 0px #31393E;
+      padding: 15px;
+
+    }
+
+    .plan {
+      min-width: 350px;
+      margin: 0px 0px 20px 0px;
+      font-size: .75rem;
+      flex: 0 0 0;
+      width: 100%;
+      border-radius: 0px 0px 13px 13px;
+      z-index: 1;
+      background-color: #fff;
+      padding: 0px;
+      border: #31393E solid 5px;
+      border-top: none;
+      border-right-width: 2px;
+      -webkit-box-shadow: 00px 10px 0px 0px #31393E;
+      -moz-box-shadow: 00px 10px 0px 0px #31393E;
+      box-shadow: 0px 10px 0px 0px #31393E;
+    }
+    .plan-wrapper.row {
+      height: 100%;
+    }
+    .logo {
+      position: absolute;
+      top: 40px;
+      left: 7px;
+    }
+    .table {
+      margin: 0px;
+    }
+
+    .thead tr {
+      background-color: #0d6efd;
+      border-bottom: #31393E solid 3px;
+      border-top: #31393E solid 3px;
+      font-size: 1rem;
+    }
+
+    .row {
+      flex-wrap: nowrap;
+    }
+
+
+    .table td {
+      padding: .25rem;
+      height: 2.6rem;
+      width: 25%;
+
+    }
+
+    .table td,
+    .table th,
+    .table-footer {
+      border-right: #31393E 3px solid;
+      border-bottom: dashed rgb(206, 206, 206) 3px;
+    }
+
+    .btn {
+      border-radius: 20px;
+      margin: 10px;
+      font-size: .75rem;
+      border: #31393E 3px solid;
+      padding: 0.3rem .7rem;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      height: calc(100vh - 50px);
+    }
+
+    .table-footer {
+      border-top: #31393E solid 2px;
+    }
+
+    .btn-purple {
+      background-color: blueviolet;
+      color: white;
+    }
+
+    .nav-link:hover {
+
+      border: #31393E 3px solid;
+
+    }
+
+    .nav-pills .nav-link.active {
+      border: #31393E 3px solid;
+    }
+
+    .nav-pills .nav-link {
+      border-radius: 1.1rem;
+    }
+
+    .nav-item {
+      margin: .5rem;
+    }
+
+    .tab {
+      width: 100%;
+      background-color: rgb(255, 217, 0);
+      border-radius: 13px 13px 0px 0px;
+      z-index: 1;
+      border: #31393E 5px solid;
+      border-bottom: 0px;
+      -webkit-box-shadow: 00px 10px 0px 0px #31393E;
+      -moz-box-shadow: 00px 10px 0px 0px #31393E;
+      box-shadow: 0px 10px 0px 0px #31393E;
+      padding: .5rem;
+
+    }
+    .core,.elective,.science {
+      display: none;
+    }
+    .window {
+      width: fit-content;
+    }
+    h3,
+    h1,
+    h2 {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    h4 {
+      margin: 20px;
+    }
+
+    .fs-4 {
+      text-align: right;
+      font-weight: 800;
+    }
+
+    .bottom {
+      border-bottom: none !important;
+    }
+    @media screen and (max-width: 900px) {
+
+    }
+    @media screen and (max-width: 900px) {
+      html {
+        overflow-x: hidden;
+      }
+      .col-7, .col-6 {
+        padding: 0px
+      }
+      .main {
+        height: 100%;
+        
+      }
+      .plan-wrapper.row {
+        display: flex;
+        flex-direction: column;
+      }
+      .plan-wrapper div {
+        width: 95%;
+      }
+      .body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sidebar {
+        height: fit-content;
+        width: 90% !important;
+        max-width: 100%;
+        margin-bottom: 30px;
+
+        h1 {
+          margin-left: 15%;
+        }
+      }
+
+      .plan,
+      .tab,
+      .box {
+        min-width: 400px;
+        width: 100%;
+      }
+
+      .main {
+        width: 100%;
+        margin: 0px 40px 0px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row body">
+      <!-- Sidebar -->
+      <div class="col-md-3 sidebar box d-flex flex-column flex-shrink-0 p-3 bg-light">
+
+        <h1 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <img class="logo" src="Star.svg" alt="">
+          <span class="fs-4">Study Planner</span>
+        </h1>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              Study Plan
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              Calendar
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              Profile
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main">
+        <div class="plan-wrapper row">
+          <div class="col-7">
+            <div class="tab box">
+              <h3>Computer Science, B.S.</h3>
+            </div>
+            <div class="col-md-9 plan">
+
+              <table class="table table-borderless">
+                <thead class="thead">
+                  <tr>
+                    <th scope="col">Fall</th>
+                    <th scope="col">Winter</th>
+                    <th scope="col">Spring</th>
+                    <th scope="col">Summer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="table table-borderless">
+                <thead class="thead">
+                  <tr>
+                    <th scope="col">Fall</th>
+                    <th scope="col">Winter</th>
+                    <th scope="col">Spring</th>
+                    <th scope="col">Summer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                  </tr>
+                </tbody>
+
+              </table>
+              <table class="table table-borderless">
+                <thead class="thead">
+                  <tr>
+                    <th scope="col">Fall</th>
+                    <th scope="col">Winter</th>
+                    <th scope="col">Spring</th>
+                    <th scope="col">Summer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                    <td class="bottom"></td>
+                  </tr>
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+          <div class="requirements col-6">
+            <div class="tab">
+              <h3>Requirements</h3>
+            </div>
+                      <div class="box  requirements">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-danger" data-target="core">Core</button>
+              <button type="button" class="btn btn-success" data-target="science">Science</button>
+              <button type="button" class="btn btn-warning" data-target="elective">Electives</button>
+            </div>
+
+        <div id="course-buttons-container" >
+          <div class="row">
+            <div class="col sort core">
+              <h4></h4>
+            </div>
+            <div class="col sort science">
+              <h4></h4>
+
+            </div>
+            <div class="col sort elective">
+              <h4></h4>
+
+            </div>
+          </div>
+        </div>
+
+          </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+  <script>
+    const coursesUrl = 'courses_data.json';
+
+    fetch(coursesUrl)
+      .then(response => response.json())
+      .then(data => {
+        initDragAndDrop(data);
+      })
+      .catch(error => console.error('Error fetching courses data:', error));
+
+    function initDragAndDrop(courses) {
+      courses.forEach((course, index) => {
+        const button = createCourseButton(course, index);
+        // Determine the column based on the course category
+        const column = document.querySelector(`.col.${course.category}`) || document.querySelector('.col.core');
+        column.appendChild(button);
+      });
+
+      initializeDroppableCells();
+    }
+
+    function createCourseButton(course, index) {
+      const button = document.createElement('button');
+      button.className = `btn draggable m-1 ${getButtonClass(course.category)}`;
+      button.id = `course-${index}`;
+      button.draggable = true;
+      button.addEventListener('dragstart', handleDragStart, false);
+
+      const buttonText = document.createTextNode(`${course.course_code} `);
+      button.appendChild(buttonText);
+
+      const badge = document.createElement('span');
+      badge.className = 'badge bg-light text-dark';
+      badge.innerText = ` ${course.credits}`;
+      button.appendChild(badge);
+
+      return button;
+    }
+
+    function getButtonClass(category) {
+      switch (category) {
+        case 'core':
+          return 'btn-danger';
+        case 'elective':
+          return 'btn-warning';
+        case 'senior':
+          return 'btn-purple';
+        case 'science':
+          return 'btn-success';
+        default:
+          return 'btn-secondary';
+      }
+    }
+
+    function handleDragStart(e) {
+      currentDraggedElement = e.target;
+      e.dataTransfer.setData('text/plain', e.target.id);
+      e.dataTransfer.effectAllowed = 'move';
+    }
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+    }
+
+    function handleCellDrop(e) {
+      e.preventDefault();
+      const targetCell = e.target.tagName === 'TD' ? e.target : e.target.closest('td');
+      if (!targetCell || !currentDraggedElement) return;
+
+      // Check if target cell already has a button
+      if (targetCell.hasChildNodes()) {
+        const existingButton = targetCell.childNodes[0];
+        // Move existing button back to its original container based on its category
+        const originalColumn = document.querySelector(`.col.${existingButton.getAttribute('data-category')}`) || document.querySelector('.col.core');
+        originalColumn.appendChild(existingButton);
+      }
+
+      // Now, place the new (currentDraggedElement) button in the cell
+      targetCell.appendChild(currentDraggedElement);
+
+      currentDraggedElement.draggable = true;
+      currentDraggedElement.addEventListener('dragstart', handleDragStart, false);
+
+      currentDraggedElement = null;
+    }
+
+    // Modifications in createCourseButton to include data-category attribute
+    function createCourseButton(course, index) {
+      const button = document.createElement('button');
+      button.className = `btn draggable m-1 ${getButtonClass(course.category)}`;
+      button.id = `course-${index}`;
+      button.setAttribute('data-category', course.category); // Store the category for later use
+      button.draggable = true;
+      button.addEventListener('dragstart', handleDragStart, false);
+
+      const buttonText = document.createTextNode(`${course.course_code} `);
+      button.appendChild(buttonText);
+
+      const badge = document.createElement('span');
+      badge.className = 'badge bg-light text-dark';
+      badge.innerText = ` ${course.credits}`;
+      button.appendChild(badge);
+
+      return button;
+    }
+
+    function initializeDroppableCells() {
+      const cells = document.querySelectorAll('.plan td:not(.table-footer td)');
+      cells.forEach(cell => {
+        cell.addEventListener('dragover', handleDragOver, false);
+        cell.addEventListener('drop', handleCellDrop, false);
+      });
+    }
+  </script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Select all buttons within the btn-group
+      const buttons = document.querySelectorAll('.btn-group .btn');
+  
+      // Add a click event listener to each button
+      buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          
+          // First, hide all divs
+          document.querySelectorAll('.sort').forEach(function(div) {
+            div.style.display = 'none';
+          });
+          
+          // Get the target class from the data-target attribute of the clicked button
+          const targetClass = this.getAttribute('data-target');
+          
+          // Then, find the div with the matching class and show it
+          const targetDiv = document.querySelector('.sort.' + targetClass);
+          if (targetDiv) {
+            targetDiv.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+  
+
+</body>
+
+</html>
