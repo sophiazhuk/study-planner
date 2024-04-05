@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.draggable {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+body {
+  height: 100vh;
+  width: auto;
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  color: #31393E;
+}
+
+.sidebar {
+  height: calc(100vh - 50px);
+  margin: 0px 40px 0px 20px;
+  font-weight: 700;
+  min-width: 255px;
+  max-width: 15%;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+.box {
+  border: #31393E 5px solid;
+  border-radius: 13px;
+  -webkit-box-shadow: 0px 10px 0px 0px #31393E;
+  -moz-box-shadow: 0px 10px 0px 0px #31393E;
+  box-shadow: 0px 10px 0px 0px #31393E;
+  padding: 15px;
+
+}
+
+.plan {
+  min-width: 350px;
+  margin: 0px 0px 20px 0px;
+  font-size: .75rem;
+  flex: 0 0 0;
+  width: 100%;
+  border-radius: 0px 0px 13px 13px;
+  z-index: 1;
+  background-color: #fff;
+  padding: 0px;
+  border: #31393E solid 5px;
+  border-top: none;
+  border-right-width: 2px;
+  -webkit-box-shadow: 00px 10px 0px 0px #31393E;
+  -moz-box-shadow: 00px 10px 0px 0px #31393E;
+  box-shadow: 0px 10px 0px 0px #31393E;
+}
+.plan-wrapper.row {
+  height: 100%;
+}
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 7px;
+}
+.table {
+  margin: 0px;
+}
+
+.thead tr {
+  background-color: #0d6efd;
+  border-bottom: #31393E solid 3px;
+  border-top: #31393E solid 3px;
+  font-size: 1rem;
+}
+
+.row {
+  flex-wrap: nowrap;
+}
+
+
+.table td {
+  padding: .25rem;
+  height: 2.6rem;
+  width: 25%;
+
+}
+
+.table td,
+.table th,
+.table-footer {
+  border-right: #31393E 3px solid;
+  border-bottom: dashed rgb(206, 206, 206) 3px;
+}
+
+.btn {
+  border-radius: 20px;
+  margin: 10px;
+  font-size: .75rem;
+  border: #31393E 3px solid;
+  padding: 0.3rem .7rem;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: calc(100vh - 50px);
+}
+
+.table-footer {
+  border-top: #31393E solid 2px;
+}
+
+.btn-purple {
+  background-color: blueviolet;
+  color: white;
+}
+
+.nav-link:hover {
+
+  border: #31393E 3px solid;
+
+}
+
+.nav-pills .nav-link.active {
+  border: #31393E 3px solid;
+}
+
+.nav-pills .nav-link {
+  border-radius: 1.1rem;
+}
+
+.nav-item {
+  margin: .5rem;
+}
+
+.tab {
+  width: 100%;
+  background-color: rgb(255, 217, 0);
+  border-radius: 13px 13px 0px 0px;
+  z-index: 1;
+  border: #31393E 5px solid;
+  border-bottom: 0px;
+  -webkit-box-shadow: 00px 10px 0px 0px #31393E;
+  -moz-box-shadow: 00px 10px 0px 0px #31393E;
+  box-shadow: 0px 10px 0px 0px #31393E;
+  padding: .5rem;
+
+}
+.core,.elective,.science {
+  display: none;
+}
+.window {
+  width: fit-content;
+}
+h3,
+h1,
+h2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+h4 {
+  margin: 20px;
+}
+
+.fs-4 {
+  text-align: right;
+  font-weight: 800;
+}
+
+.bottom {
+  border-bottom: none !important;
+}
+@media screen and (max-width: 900px) {
+
+}
+@media screen and (max-width: 900px) {
+  html {
+    overflow-x: hidden;
+  }
+  .col-7, .col-6 {
+    padding: 0px
+  }
+  .main {
+    height: 100%;
+    
+  }
+  .plan-wrapper.row {
+    display: flex;
+    flex-direction: column;
+  }
+  .plan-wrapper div {
+    width: 95%;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    height: fit-content;
+    width: 90% !important;
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    h1 {
+      margin-left: 15%;
+    }
+  }
+
+  .plan,
+  .tab,
+  .box {
+    min-width: 400px;
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    margin: 0px 40px 0px 20px;
+  }
+}
